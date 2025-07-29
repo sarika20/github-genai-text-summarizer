@@ -37,9 +37,13 @@ github-genai-text-summarizer/
 ## 🛠️ Installation
 
 ```bash```
+
 git clone https://github.com/<your-username>/github-genai-text-summarizer.git
+
 cd github-genai-text-summarizer
+
 pip install -r requirements.txt
+
 
 📦 Example
 🔗 Input:
@@ -47,9 +51,12 @@ pip install -r requirements.txt
 I’d love to have a dark theme for the UI. It would reduce eye strain and make it more accessible...
 
 🧠 Summary Output:
+
 "User requested a dark mode UI feature to improve accessibility and reduce eye strain."
 
 🧑‍💻 Author
+
 Sarika Marathe
+
 GitHub | LinkedIn
 
