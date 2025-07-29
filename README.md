@@ -17,7 +17,9 @@ A powerful AI-powered tool that summarizes GitHub repository content such as REA
 ## 📁 Project Structure
 
 github-genai-text-summarizer/
+
 │
+
 ├── app.py # Main application script (e.g. Streamlit or Flask)
 ├── summarizer.py # Core logic to interact with GenAI model
 ├── github_api.py # GitHub API integration for fetching issues/PRs/README
