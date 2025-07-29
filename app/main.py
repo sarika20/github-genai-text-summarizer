@@ -1,11 +1,10 @@
 from flask import Flask, render_template, request
-import openai
-import os
+from transformers import pipeline
 
 app = Flask(__name__)
 
-# Set your OpenAI API key here (or via env variable)
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# Load summarization pipeline
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 @app.route("/", methods=["GET", "POST"])
 def summarize():
@@ -14,16 +13,8 @@ def summarize():
         user_input = request.form["input_text"]
         if user_input:
             try:
-                response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": "You are a helpful summarizer."},
-                        {"role": "user", "content": f"Summarize this:\n{user_input}"}
-                    ],
-                    max_tokens=150,
-                    temperature=0.5
-                )
-                summary = response.choices[0].message["content"].strip()
+                result = summarizer(user_input, max_length=130, min_length=30, do_sample=False)
+                summary = result[0]['summary_text']
             except Exception as e:
                 summary = f"Error: {e}"
 
