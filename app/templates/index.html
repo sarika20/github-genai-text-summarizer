@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Text Summarizer</title>
+</head>
+<body style="font-family:Arial; padding: 2rem;">
+    <h2>🧠 AI Text Summarizer (GPT-3.5)</h2>
+    <form method="POST">
+        <textarea name="input_text" rows="10" cols="80" placeholder="Paste long text here..." required></textarea><br><br>
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if summary %}
+        <h3>📋 Summary:</h3>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
