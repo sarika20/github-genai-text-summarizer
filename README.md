@@ -16,3 +16,35 @@ A powerful AI-powered tool that summarizes GitHub repository content such as REA
 
 ## 📁 Project Structure
 
+github-genai-text-summarizer/
+│
+├── app.py # Main application script (e.g. Streamlit or Flask)
+├── summarizer.py # Core logic to interact with GenAI model
+├── github_api.py # GitHub API integration for fetching issues/PRs/README
+├── requirements.txt # Python dependencies
+└── README.md # You're here!
+
+
+---
+
+## 🛠️ Installation
+
+```bash```
+git clone https://github.com/<your-username>/github-genai-text-summarizer.git
+cd github-genai-text-summarizer
+pip install -r requirements.txt
+
+📦 Example
+🔗 Input:
+
+# Issue Title: Feature request for dark mode
+
+I’d love to have a dark theme for the UI. It would reduce eye strain and make it more accessible...
+
+🧠 Summary Output:
+"User requested a dark mode UI feature to improve accessibility and reduce eye strain."
+
+🧑‍💻 Author
+Sarika Marathe
+GitHub | LinkedIn
+
