@@ -37,8 +37,6 @@ pip install -r requirements.txt
 📦 Example
 🔗 Input:
 
-# Issue Title: Feature request for dark mode
-
 I’d love to have a dark theme for the UI. It would reduce eye strain and make it more accessible...
 
 🧠 Summary Output:
